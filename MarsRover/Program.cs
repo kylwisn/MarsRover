@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 
 // Mission Objective: 
@@ -34,13 +34,16 @@ namespace MarsRover
             string moveCommand;
             string startLocation;
 
-            //Enter starting location
+            //Enter starting location for rover1
             Console.Write("First Rover: Enter starting location: ");
             startLocation = Console.ReadLine();
 
-            //Enter the instruction string
+            //Enter the instruction string for rover1
             Console.Write("First Rover: Enter instruction string: ");
             moveCommand = Console.ReadLine();
+
+            //Visual line break for separating rovers in the console
+            Console.WriteLine();
 
             //Create rover1 object
             Rover rover1 = new Rover(startLocation);
@@ -48,28 +51,25 @@ namespace MarsRover
             //Launching the Move function of rover1 with the moveCommand string
             rover1.Move(moveCommand);
 
-            //Reporting the final position of rover1
-            Console.WriteLine("Rover 1 final position: " + rover1.newLocation);
-
-
-            //Visual line break for separating rovers in the console
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-            //Enter starting location
+            //Enter starting location for rover2
             Console.Write("Second Rover: Enter starting location: ");
             startLocation = Console.ReadLine();
 
-            //Enter the instruction string
+            //Enter the instruction string for rover2
             Console.Write("Second Rover: Enter instruction string: ");
             moveCommand = Console.ReadLine();
+
+            //Visual line break for separating rovers in the console
+            Console.WriteLine();
 
             //Create rover2 object
             Rover rover2 = new Rover(startLocation);
 
             //Launching the Move function of rover2 with the moveCommand string
             rover2.Move(moveCommand);
+
+            //Reporting the final position of rover1
+            Console.WriteLine("Rover 1 final position: " + rover1.newLocation);
 
             //Reporting the final position of rover2
             Console.WriteLine("Rover 2 final position: " + rover2.newLocation);
